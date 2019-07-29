@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Show author and potin</title>
+  </head>
+  <body style = "background-color:rgb(100,150,142);" >
+    <h1 style="text-align:center;">Voici la page du potin n°<%=i%> </h1>
+        <p style="text-align:center;">
+          Le nom de l author : <%= gossips[0] %><br/>
+          Le content de l author:<%= gossips[1] %>
+        </p>
+           <a  href="/gossips/<%=i%>/edit/">Si vous voulez changer le potin</a>
+        <h3 style="text-align:center;"> Clique <a href="/">ici</a> pour revenir à la page des potins </h3>
+         
+  </body>
+</html>
