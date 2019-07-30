@@ -22,5 +22,17 @@ class  Gossip
 		tab = CSV.read("./db/gossip.csv")
 		return tab[id-1]
 	end
+	def self.update(author,content,id)
+		id = id.to_i
+		tab = CSV.read("./db/gossip.csv")
+		tab[id-1] = [author,content]
+		CSV.open("./db/gossip.csv", "w") do |csv|
+			for i in 0..tab.length-1 do
+    			csv << tab[i]
+    		end
+    	end
+    end
 end
+   		
+
 
